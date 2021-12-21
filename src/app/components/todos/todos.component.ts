@@ -8,7 +8,7 @@ import {Todo} from './../../models/Todo';
 })
 export class TodosComponent implements OnInit {
 
-  todos:Todo[];
+  todos!: Todo[];
 
 
   constructor() { }
@@ -16,8 +16,12 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {
     this.todos=[
       {
-        content:'First Todo',
-        completed: false;
+        content:'First todo',
+        completed: false
+      },
+      {
+        content: 'Second todo',
+        completed: true
       }
     ]
   }
